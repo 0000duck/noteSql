@@ -1,0 +1,7 @@
+create or replace procedure pro_insertDept is
+begin
+  insert into dept values(99,'市场拓展部','BEIJING');	--插入数据记录
+  commit;									--提交数据
+  dbms_output.put_line('插入新记录成功！');		--提示插入记录成功
+end pro_insertDept;
+/

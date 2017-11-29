@@ -1,0 +1,9 @@
+create table employees_temp
+as select * from employees
+where department_id=30;
+
+alter table employees_temp
+add constraint temp_departid_fk
+foreign key(department_id)
+references departments(department_id);
+

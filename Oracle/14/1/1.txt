@@ -1,0 +1,8 @@
+--ĞŞ¸Ä
+alter system set large_pool_size=64m;
+
+
+
+--ÏÔÊ¾
+show parameter large_pool_size;
+

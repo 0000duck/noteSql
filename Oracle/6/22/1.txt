@@ -1,0 +1,11 @@
+create or replace function get_avg_pay(var_job varchar2) return number is--创建一个函数，该函数实现计算某个职务的平均工资，传入职务名称参数
+  num_avg_pay number;--定义临时变量，保存某个职务的平均工资
+begin
+  select avg(sal) into num_avg_pay from emp where job=var_job;--获取某个部门的平均工资
+  return(round(num_avg_pay,2));--返回平均工资
+exception
+  when no_data_found then --若此职务不存在
+    dbms_output.put_line('该职务不存在');
+    return(0); --返回平均工资为0
+end;
+/

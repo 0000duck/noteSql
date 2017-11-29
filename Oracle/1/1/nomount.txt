@@ -1,0 +1,5 @@
+connect system/1qaz2wsx as sysdba
+
+shutdown immediate
+
+startup nomount

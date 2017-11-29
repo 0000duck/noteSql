@@ -1,0 +1,12 @@
+set serveroutput on
+declare
+  var_ename emp.ename%type; 						--声明与ename列类型相同的变量
+  var_job emp.job%type; 							--声明与job列类型相同的变量
+begin
+  select ename,job
+  into var_ename,var_job
+  from emp
+  where empno=7369;							--检索数据，并保存在变量中
+  dbms_output.put_line(var_ename||'的职务是'||var_job);	--输出变量的值
+end;
+/

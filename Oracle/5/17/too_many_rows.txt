@@ -1,0 +1,22 @@
+set serveroutput on
+declare
+  var_empno number;--定义变量，存储雇员编号
+  var_ename varchar2(50);--定义变量，存储雇员名称
+begin
+  select empno,ename into var_empno,var_ename 
+  from emp
+  where deptno=10;--检索部门编号为10的雇员信息
+  if sql%found then --若检索成功，则输出雇员信息
+    dbms_output.put_line('雇员编号：'||var_empno||'；雇员名称'||var_ename);
+  end if;
+exception --捕获异常
+  when too_many_rows then --若SELECT INTO语句的返回记录超过一行
+    dbms_output.put_line('返回记录超过一行');
+  when no_data_found then --若SELECT INTO语句的返回记录为0行
+    dbms_output.put_line('无数据记录');
+end;
+/
+
+
+
+ 

@@ -1,0 +1,7 @@
+alter system set db_16k_cache_size = 16M scope=both;
+create tablespace tbs_test_5 datafile 'D:\OracleFiles\OracleData\datafile5.dbf'
+size 64m reuse
+autoextend on next 4m maxsize unlimited
+blocksize 16k
+extent management local autoallocate
+segment space management auto;

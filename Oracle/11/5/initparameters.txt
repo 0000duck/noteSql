@@ -1,0 +1,11 @@
+create table goods
+(
+  id number,
+  goodname varchar2(50)
+)
+storage(initial 2048k)
+partition by hash(id)
+(
+ partition par1 tablespace tbsp_1,
+ partition par2 tablespace tbsp_2
+);

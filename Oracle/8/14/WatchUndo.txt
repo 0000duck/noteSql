@@ -1,0 +1,3 @@
+select rn.name,rs.xacts,rs.writes,rs.extents
+from v$rollname rn,v$rollstat rs
+where rn.usn = rs.usn;

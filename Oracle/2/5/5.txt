@@ -1,0 +1,2 @@
+ col member for a50;
+ select name from v$logfile;

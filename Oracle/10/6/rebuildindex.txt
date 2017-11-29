@@ -1,0 +1,1 @@
+alter index emp_deptno_index rebuild;

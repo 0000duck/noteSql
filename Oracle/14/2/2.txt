@@ -1,0 +1,2 @@
+select sum(getmisses) ²»ÃüÖĞÊı
+from v$rowcache;

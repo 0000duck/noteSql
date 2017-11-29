@@ -1,0 +1,34 @@
+--在SQL*Plus模式下
+connect system/1qaz2wsx as sysdba;
+select log_mode from v$database;
+---在CMD环境下
+rman target system/1qaz2wsx nocatalog;
+--在RMAN环境下
+shutdown immediate
+startup mount
+
+
+
+run{
+allocate channel ch_1 type disk;
+backup database
+format 'D:\OracleFiles\Backup\orcl_%t_%u.bak';
+}
+
+
+alter database open;
+
+shutdown immediate;
+--然后手动删除users01.dbf文件，并试图使用startup命令启动数据库
+
+
+
+
+startup mount
+
+run{
+allocate channel ch_1 type disk;
+restore database;
+}
+
+alter database open;

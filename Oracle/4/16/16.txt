@@ -1,0 +1,22 @@
+truncate table jobs_temp;
+
+
+insert into jobs_temp values('OFFICE','办公文员',3000,5000);
+
+
+savepoint sp;
+
+
+insert into jobs_temp values('FINANCE','财务人员',4000,8000);
+
+
+select * from jobs_temp;
+
+
+rollback to savepoint sp;
+
+
+commit;
+
+
+select * from jobs_temp;

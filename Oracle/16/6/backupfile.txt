@@ -1,0 +1,5 @@
+--在rman环境下
+backup datafile 1,2,3 filesperset 3;
+
+
+list backup of datafile 1,2,3;

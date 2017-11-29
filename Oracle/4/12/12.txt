@@ -1,0 +1,2 @@
+select sysdate as 默认格式日期, to_char(sysdate,'YYYY-MM-DD') as 转换后日期
+from dual;

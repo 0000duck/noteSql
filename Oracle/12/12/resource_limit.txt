@@ -1,0 +1,2 @@
+show parameter resource_limit;
+alter system set resource_limit=true;

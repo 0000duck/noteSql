@@ -1,0 +1,18 @@
+set serveroutput on
+declare
+  null_exception exception;--声明一个exception类型的异常变量
+  dept_row dept%rowtype;--声明rowtype类型的变量dept_row,与dept表中一行的数据类型相同
+begin
+  dept_row.deptno := 66;--给部门编号变量赋值
+  dept_row.dname := '公关部';--给部门名称变量赋值
+  insert into dept 
+  values(dept_row.deptno,dept_row.dname,dept_row.loc);--向dept表中插入一条记录
+  if dept_row.loc is null then--如果判断“loc”变量的值为null
+    raise null_exception;--引发null异常，程序转入exception部分
+  end if;
+exception
+  when null_exception then--当raise引发的异常是null_exception时
+  dbms_output.put_line('loc字段的值不许为null');--输出异常提示信息
+  rollback;--回滚插入的数据记录
+end;
+/

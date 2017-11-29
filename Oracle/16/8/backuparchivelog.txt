@@ -1,0 +1,6 @@
+--ÔÚrmanÃüÁîÏÂ£º
+backup archivelog all delete all input;
+
+
+
+list backup of archivelog all;

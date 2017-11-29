@@ -1,0 +1,19 @@
+--创建用户dongfang
+create user dongfang identified by mrsoft
+default tablespace users
+quota 10m on users;
+--创建用户xifang
+create user xifang identified by mrsoft
+default tablespace users
+quota 10m on users;
+--授权
+grant create session,create table to dongfang with admin option;
+connect dongfang/mrsoft;
+grant create session,create table to xifang;
+--连接到xifang
+connect xifang/mrsoft;
+create table tb_xifang
+( id number,
+  name varchar2(20)
+);
+

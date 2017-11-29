@@ -1,0 +1,10 @@
+create table students_3(
+stuno number(10) not null, --学号
+stuname varchar2(8),	--姓名
+sex char(2),	--性别
+age int,	--年龄
+departno varchar2(2) not null,	--系别编号
+classno varchar2(4) not null,	--班级编号
+regdate date default sysdate	--建档日期
+)tablespace tbsp_1 
+storage(initial 256k);

@@ -1,0 +1,5 @@
+ÔÚrmanÏÂ
+shutdown immediate
+startup mount
+backup database format = 'D:\OracleFiles\Backup\oradb_%d_%s.bak';
+alter database open;

@@ -1,0 +1,48 @@
+--在sqlplus环境下
+delete from scott.emp;
+commit;
+alter system switch logfile;
+
+
+
+
+exec dbms_logmnr_d.build('e:\orcldata\logminer\director.ora','e:\orcldata\logminer');
+
+
+
+
+exec dbms_logmnr.add_logfile('f:\app\Administrator\oradata\orcl\redo01a.log',dbms_logmnr.new);
+exec dbms_logmnr.add_logfile('f:\app\Administrator\oradata\orcl\redo02a.log',dbms_logmnr.new);
+exec dbms_logmnr.add_logfile('f:\app\Administrator\oradata\orcl\redo03a.log',dbms_logmnr.new);
+
+
+
+exec dbms_logmnr.start_logmnr(dictfilename=>'e:\orcldata\logminer\director.ora');
+
+
+
+
+select scn,sql_redo
+from v$logmnr_contents
+where seg_name ='EMP';
+
+
+
+exec dbms_logmnr.end_logmnr;
+
+
+
+
+
+
+---在rman环境下
+run
+{
+allocate channel ch_1 type disk;
+allocate channel ch_2 type disk;
+set until scn 6501278;
+restore database;
+recover database;
+sql'alter database open resetlogs';
+}
+

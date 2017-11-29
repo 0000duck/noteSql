@@ -1,0 +1,2 @@
+alter table students_test
+add constraint students_test_PK primary key(stuno);

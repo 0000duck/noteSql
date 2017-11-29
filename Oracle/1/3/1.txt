@@ -1,0 +1,1 @@
+在开始菜单中选择“所有程序”/“Oracle - OraDb11g_home1”/“配置和移植工具”/“Database Configuration Assistant”菜单命令，弹出“Database Configuration Assistant”窗口，该窗口中单击“下一步”按钮，进入向导步骤窗口，选中“创建数据库”单选按钮，然后按照向导逐步操作即可（在向导的步骤3窗口的“全局数据库名”文本框中需要输入MR）。

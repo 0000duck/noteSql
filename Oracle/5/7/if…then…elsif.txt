@@ -1,0 +1,17 @@
+set serveroutput on
+declare
+  month int:=10;--定义整形变量并赋值
+begin
+  if month >= 0 and month <= 3  then--判断春季
+    dbms_output.put_line('这是春季');
+  elsif  month >= 4 and month <= 6 then--判断夏季
+    dbms_output.put_line('这是夏季');
+  elsif  month >= 7 and month <= 9  then--判断秋季
+    dbms_output.put_line('这是秋季');
+  elsif  month >= 10 and month <= 12 then--判断冬季
+    dbms_output.put_line('这是冬季');
+  else
+    dbms_output.put_line('对不起，月份不合法！');
+  end if;
+end;
+/

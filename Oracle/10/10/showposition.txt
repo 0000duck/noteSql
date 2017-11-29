@@ -1,0 +1,3 @@
+select tablespace_name,segment_type,bytes
+from user_segments
+where segment_name = 'EMP_DEPTNO_INDEX';

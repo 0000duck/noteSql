@@ -1,0 +1,14 @@
+--创建目录
+create directory dump_dir as 'd:\dump';
+
+--给hr授权
+grant read,write on directory dump_dir to hr;
+
+
+
+--在cmd下导出表
+expdp hr/hr directory=dump_dir dumpfile=tab.dmp tables=employees
+
+
+
+

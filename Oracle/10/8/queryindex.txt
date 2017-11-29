@@ -1,0 +1,4 @@
+connect system/1qaz2wsx
+select index_name,index_type
+from dba_indexes
+where owner = 'HR';

@@ -1,0 +1,4 @@
+ alter database add logfile
+('D:\OracleFiles\LogFiles\REDO4_A.LOG',
+'E:\OracleFiles\LogFiles\REDO4_B.LOG')
+size 20M;

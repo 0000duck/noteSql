@@ -1,0 +1,6 @@
+--创建用户
+create user hello identified by mrsoft
+default tablespace users
+temporary tablespace temp;
+--授权
+grant connect,create table to hello;

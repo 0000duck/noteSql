@@ -1,0 +1,3 @@
+alter tablespace undo_tbs_1 
+add datafile 'D:\OracleFiles\OracleData\undotbs_add.dbf' 
+size 2g;

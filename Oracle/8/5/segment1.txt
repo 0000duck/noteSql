@@ -1,0 +1,4 @@
+create tablespace tbs_test_3 datafile 'D:\OracleFiles\OracleData\datafile3.dbf'
+size 20m
+extent management local autoallocate
+segment space management manual;

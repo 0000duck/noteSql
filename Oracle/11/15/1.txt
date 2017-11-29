@@ -1,0 +1,13 @@
+ create table Books_Sale						--图书销售表
+(
+  id integer primary key,				--编号
+  quantity number,					--销售数量
+  book_name varchar2(50),				--名称
+  publisher varchar2(50)                                --出版社
+)
+partition by list(publisher)					--以publisher 列为分区键创建列表分区
+(
+  partition A values('A省出版社'),			--A省份
+  partition B values('B省出版社'), 		--B省份
+  partition C values('C省出版社') 			--C省份
+);

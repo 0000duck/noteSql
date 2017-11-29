@@ -1,0 +1,4 @@
+select e.empno as 员工编号, e.ename as 员工名称, d.dname as 部门
+from emp e,dept d
+where e.deptno=d.deptno
+and e.job='MANAGER';

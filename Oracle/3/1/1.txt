@@ -1,0 +1,2 @@
+set pagesize 18
+select user_id,username,account_status from dba_users;

@@ -1,0 +1,3 @@
+alter database add logfile member
+'D:\OracleFiles\LogFiles\REDO1_new.LOG' to 
+('E:\app\Administrator\oradata\orcl\REDO01.LOG') ;

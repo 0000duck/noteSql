@@ -1,0 +1,5 @@
+run{
+allocate channel ch_1 type disk;
+restore tablespace example;
+recover tablespace temp;
+}

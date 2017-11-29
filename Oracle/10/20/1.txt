@@ -1,0 +1,13 @@
+--创建表
+create table tb_10_1(
+stuno number(10) not null, --学号
+stuname varchar2(8),	--姓名
+sex char(2),	--性别
+age int
+);
+
+
+---创建索引
+create index tb_10_1_index on tb_10_1(sex)
+pctfree 25
+tablespace users;

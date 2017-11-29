@@ -1,0 +1,11 @@
+set serveroutput on
+declare
+  primary_iterant exception;--定义一个异常变量
+  pragma exception_init(primary_iterant,-00001);--关联错误号和异常变量名
+begin
+  insert into dept values(10,'软件开发部','深圳');--向dept表中插入一条与已有主键值重复的记录，以便引发异常
+exception
+  when primary_iterant then  --若oracle捕获到的异常为-00001异常
+    dbms_output.put_line('主键不允许重复！');--输出异常描述信息
+end;
+/

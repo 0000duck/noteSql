@@ -1,0 +1,2 @@
+create bigfile tablespace tbs_test_big datafile 'D:\OracleFiles\OracleData\datafilebig.dbf'
+size 2g;

@@ -1,0 +1,5 @@
+select to_char(begin_time,'hh24:mi:ss') as 开始时间,
+to_char(end_time,'hh24:mi:ss') as 结束时,
+undoblks as 回退块数
+from v$undostat
+order by begin_time;

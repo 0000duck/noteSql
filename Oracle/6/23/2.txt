@@ -1,0 +1,12 @@
+create or replace trigger about_job_trigger
+  before update or insert of job
+  on emp
+  for each row
+begin
+  if updating then
+     :new.job:=upper(:new.job);
+  else
+    :new.job:=upper(:new.job);
+  end if;
+end;
+/

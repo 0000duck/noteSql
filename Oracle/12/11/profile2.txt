@@ -1,0 +1,5 @@
+create profile password_lift_time limit
+password_life_time 30
+password_grace_time 3;
+alter user dongfang profile password_lift_time;
+

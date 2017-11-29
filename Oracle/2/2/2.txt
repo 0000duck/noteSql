@@ -1,0 +1,3 @@
+col file_name for a50;
+set linesize 100;
+select file_name,tablespace_name from dba_data_files;

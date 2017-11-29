@@ -1,0 +1,21 @@
+--进入hr模式
+connect hr/hr;
+
+--创建employees的副本
+create table employees_copy as select * from employees;
+
+
+--查询数据字典，看employees_copy的存在
+select * from tab;
+
+
+--删除掉employees_copy
+drop table employees_copy;
+
+--查询回收站信息
+select object_name,original_name from user_recyclebin;
+
+
+--闪回恢复数据表
+flashback table employees_copy to before drop;
+

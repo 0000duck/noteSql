@@ -1,0 +1,12 @@
+set serveroutput on
+begin
+  update emp
+  set sal=sal*(1+0.2)
+  where job='SALESMAN';
+  if sql%notfound then
+    dbms_output.put_line('没有雇员需要上调工资');
+  else
+    dbms_output.put_line('有'||sql%rowcount||'个雇员工资上调20%');
+  end if;
+end;
+/

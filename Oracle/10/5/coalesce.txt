@@ -1,0 +1,2 @@
+alter index emp_deptno_index
+coalesce deallocate unused;

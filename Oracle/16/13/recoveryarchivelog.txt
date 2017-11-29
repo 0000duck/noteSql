@@ -1,0 +1,37 @@
+--SQL*Plus模式下
+select log_mode from v$database;
+
+
+
+---在CMD模式下：
+rman target system/1qaz2wsx nocatalog;
+
+
+
+
+--在rman模式下：
+run{
+allocate channel ch_1 type disk;
+allocate channel ch_2 type disk;
+backup tablespace users
+format 'D:\OracleFiles\Backup\users_tablespace.bak';
+}
+
+
+
+shutdown immediate; 
+--然后手动删除users表空间对应的数据文件
+
+
+startup mount;
+
+
+run{
+allocate channel ch_1 type disk;
+restore tablespace users;
+recover tablespace users;
+}
+
+alter database open;
+
+

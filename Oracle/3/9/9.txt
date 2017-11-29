@@ -1,0 +1,2 @@
+ col comm null '¿ÕÖµ'
+ select empno,ename,comm from scott.emp where comm is null;

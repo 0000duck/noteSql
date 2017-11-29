@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate-3.2"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/OracleDriver"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibeernate"/>
+	<classpathentry kind="lib" path="C:/Users/Administrator/Desktop/classes12.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

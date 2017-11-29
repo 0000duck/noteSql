@@ -1,0 +1,2 @@
+create index emp_job_fun
+on emp(lower(job));

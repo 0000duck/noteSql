@@ -1,0 +1,7 @@
+//--在cmd模式下
+rman target system/1qaz2wsx catalog rman_user/mrsoft;
+
+
+
+//--在rman模式下
+ backup database format 'D:\OracleFiles\Backup\oradb_%Y_%M_%D_%U.bak' maxsetsize 2G;

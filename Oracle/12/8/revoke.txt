@@ -1,0 +1,2 @@
+connect system/1qaz2wsx;
+revoke delete,update on scott.emp from xifang;

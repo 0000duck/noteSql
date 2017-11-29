@@ -1,0 +1,16 @@
+
+
+create table jobs_temp(
+job_id varchar2(10) primary key,
+job_title varchar2(35) not null,
+min_salary number(6),
+max_salary number(6));
+
+
+
+
+
+insert into jobs_temp
+select * from jobs
+where jobs.max_salary > 10000;
+

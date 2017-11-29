@@ -1,0 +1,14 @@
+--在cmd环境下：
+rman target system/1qaz2wsx nocatalog;
+
+
+--在rman环境下
+run{
+allocate channel ch_1 type disk;
+backup tablespace example,temp
+format 'D:\OracleFiles\Backup\%d_%p_%t_%c.dbf';
+}
+
+
+--显示
+list backup of tablespace example,temp;

@@ -1,0 +1,3 @@
+ select empno,ename,sal from scott.emp;
+ SELECT empno,ename,sal FROM scott.emp;
+ selECT empno,ename,sal frOM scott.emp;

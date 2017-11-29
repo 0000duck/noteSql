@@ -1,0 +1,1 @@
+create temporary tablespace temp_01 tempfile 'D:\OracleFiles\tempfiles\temp_01.tpf' size 300m;

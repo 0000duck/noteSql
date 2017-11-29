@@ -1,0 +1,4 @@
+create or replace view emp_view_complex as
+select deptno 部门编号,max(sal) 最高工资,min(sal) 最低工资,avg(sal) 平均工资
+from emp
+group by deptno;

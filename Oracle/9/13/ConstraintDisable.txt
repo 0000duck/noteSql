@@ -1,0 +1,8 @@
+ create table Student
+ (
+   StuCode varchar2(4) not null,
+   StuName varchar2(10) not null,
+   Age int constraint Age_CK check (age > 0 and age <120) disable,
+   Province varchar2(20),
+   SchoolName varchar2(50)
+ );

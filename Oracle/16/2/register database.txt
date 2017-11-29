@@ -1,0 +1,16 @@
+--在SQL*Plus环境下
+connect system/1qaz2wsx
+create tablespace rman_tbsp datafile 'D:\OracleFiles\Recover\rman_tbsp.dbf' size 2G;
+
+
+create user rman_user identified by mrsoft default tablespace rman_tbsp temporary tablespace temp;
+grant connect,recovery_catalog_owner,resource to rman_user;
+
+
+//在cmd命令行环境下
+rman catalog rman_user/mrsoft target orcl;
+
+
+//在rman模式下
+create catalog tablespace rman_tbsp;
+register database;

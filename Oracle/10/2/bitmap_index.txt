@@ -1,0 +1,3 @@
+create bitmap index emp_salary_bmp
+on employees(salary)
+tablespace users;

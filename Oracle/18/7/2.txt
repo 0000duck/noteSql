@@ -1,0 +1,17 @@
+--在scott模式下
+connect scott/1qaz2wsx;
+--创建test表
+create table test as select * from dept;
+
+--查询test表中的记录
+select * from test;
+
+--显示时间
+set time on;
+--向表中插入1条记录
+insert into test values(23,'df1','changchun');
+commit;
+
+--闪回数据，恢复到插入记录之前的状态
+alter table test enable row movement;
+flashback table test to timestamp to_timestamp('2012-04-26 16:54:22','yyyy-mm-dd hh24:mi:ss');

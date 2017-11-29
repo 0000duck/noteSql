@@ -1,0 +1,4 @@
+create view view_emp_dept
+  as select empno,ename,dept.deptno,dname,job,hiredate
+     from emp,dept
+     where emp.deptno = dept.deptno;

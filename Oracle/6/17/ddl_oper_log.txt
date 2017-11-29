@@ -1,0 +1,8 @@
+create table ddl_oper_log
+(
+  db_obj_name varchar2(20),--数据对象名称
+  db_obj_type varchar2(20),--对象类型
+  oper_action varchar2(20),--具体dll行为
+  oper_user varchar2(20),--操作用户
+  oper_date date--操作日期
+);

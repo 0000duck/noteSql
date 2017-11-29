@@ -1,0 +1,5 @@
+ create table goods
+(
+  id int primary key,
+  good_name varchar2(50)
+);

@@ -1,0 +1,7 @@
+create index grade_index on Books_Sale(publisher)
+local		--根据表分区创建本地索引分区
+(
+  partition p1 tablespace users,
+  partition p2 tablespace users,
+  partition p3 tablespace users
+);

@@ -1,0 +1,16 @@
+connect system/1qaz2wsx sydba;
+select oldest_flashback_scn,oldest_flashback_time from v$flashback_database_log;
+
+
+
+
+
+shutdown immediate
+startup mount;
+
+
+
+flashback database to scn 3866472
+
+
+alter database open resetlogs;

@@ -1,0 +1,20 @@
+set serveroutput on
+declare
+  season int:=3;--定义整形变量并赋值
+  aboutInfo varchar2(50); 
+begin
+  case season 
+    when 1 then
+      aboutInfo := season||'季度包括1，2，3月份';
+    when 2 then
+      aboutInfo := season||'季度包括4，5，6月份';
+    when 3 then
+      aboutInfo := season||'季度包括7，8，9月份';
+    when 4 then
+      aboutInfo := season||'季度包括10，11，12月份';
+    else
+      aboutInfo := season||'季节不合法';
+  end case;
+  dbms_output.put_line(aboutinfo);
+end;
+/

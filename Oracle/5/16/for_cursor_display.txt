@@ -1,0 +1,14 @@
+set serveroutput on
+declare
+ cursor cur_emp is
+ select * from emp
+ where deptno = 30;
+begin
+  for emp_record in cur_emp
+  loop
+    dbms_output.put('雇员编号：'||emp_record.empno);
+    dbms_output.put('；雇员名称：'||emp_record.ename);
+    dbms_output.put_line('；雇员职务：'||emp_record.job);
+  end loop;
+end;
+/

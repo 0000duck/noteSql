@@ -1,0 +1,1 @@
+create table employees_copy as select * from employees;

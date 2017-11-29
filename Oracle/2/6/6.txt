@@ -1,0 +1,2 @@
+ col name format a30;
+ select dbid,name,log_mode from v$database;

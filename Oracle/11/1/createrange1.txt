@@ -1,0 +1,17 @@
+create table ware_retail_part --创建一个描述商品零售的数据表
+(
+  id integer primary key,--销售编号
+  retail_date date,--销售日期
+  ware_name varchar2(50)--商品名称
+)
+partition by range(retail_date)
+(
+  --2011年第一个季度为part_01分区
+  partition par_01 values less than(to_date('2011-04-01','yyyy-mm-dd')) tablespace TBSP_1,
+  --2011年第二个季度为part_02分区
+  partition par_02 values less than(to_date('2011-07-01','yyyy-mm-dd')) tablespace TBSP_1,
+  --2011年第三个季度为part_03分区
+  partition par_03 values less than(to_date('2011-10-01','yyyy-mm-dd')) tablespace TBSP_2,
+  --2011年第四个季度为part_04分区
+  partition par_04 values less than(to_date('2012-01-01','yyyy-mm-dd')) tablespace TBSP_2 
+);

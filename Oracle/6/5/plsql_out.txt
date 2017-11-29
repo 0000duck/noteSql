@@ -1,0 +1,10 @@
+set serverout on
+declare
+  var_dname dept.dname%type;
+  var_loc dept.loc%type;
+begin
+  select_dept(99,var_dname,var_loc);
+  dbms_output.put_line(var_dname||'Î»ÓÚ£º'||var_loc);
+end;
+/
+

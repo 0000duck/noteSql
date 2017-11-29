@@ -1,0 +1,20 @@
+connect scott/1qaz2wsx;
+
+
+create table dept_copy as select * from dept;
+
+
+
+select * from tab;
+
+
+
+drop table dept_copy;
+
+
+select object_name,original_name from user_recyclebin;
+
+
+
+flashback table dept_copy to before drop;
+

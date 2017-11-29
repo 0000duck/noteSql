@@ -1,0 +1,2 @@
+create temporary tablespace tp3 tempfile 'D:\OracleFiles\tempfiles\tp3.tpf' size 10m tablespace group group3;
+alter tablespace tp1 tablespace group group3;

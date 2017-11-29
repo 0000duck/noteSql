@@ -1,0 +1,4 @@
+ col empno heading 雇员编号
+ col ename heading 雇员姓名
+ col sal heading 雇员工资
+ select empno,ename,sal from scott.emp;

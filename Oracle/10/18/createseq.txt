@@ -1,0 +1,5 @@
+create sequence empno_seq
+maxvalue 99999
+start with 9000
+increment by 100
+cache 50;

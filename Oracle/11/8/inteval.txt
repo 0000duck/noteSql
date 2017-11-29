@@ -1,0 +1,13 @@
+create table saleRecord
+(
+ id number primary key, --编号
+ goodsname varchar2(50),--商品名称
+ saledate date,--销售日期
+ quantity number--销售量
+)
+partition by range(saledate)
+interval (numtoyminterval(1,'year'))
+(
+  --设置分区键值日期小于2012-01-01
+  partition par_fist values less than (to_date('2012-01-01','yyyy-mm-dd'))
+);

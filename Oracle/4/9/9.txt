@@ -1,0 +1,4 @@
+insert into emp(empno,ename,job) values(9527,'EAST','SALESMAN');
+select e.empno,e.ename,e.job,d.deptno,d.dname
+from emp e left join dept d
+on e.deptno=d.deptno;

@@ -1,0 +1,3 @@
+show newpage
+set newpage 1
+select user_id,username,account_status from dba_users;

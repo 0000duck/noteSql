@@ -1,0 +1,4 @@
+connect scott/1qaz2wsx
+select column_expression
+from user_ind_expressions
+where index_name = 'EMP_JOB_FUN';

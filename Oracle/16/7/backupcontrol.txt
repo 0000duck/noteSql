@@ -1,0 +1,10 @@
+--在rman环境下
+backup current controlfile;
+或
+backup tablespace tbsp_1 include current controlfile;
+
+
+
+list backup of controlfile;
+
+

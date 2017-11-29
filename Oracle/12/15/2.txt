@@ -1,0 +1,6 @@
+--创建角色
+create role mr identified by 123456;
+
+
+--授权
+grant connect,create table to mr;

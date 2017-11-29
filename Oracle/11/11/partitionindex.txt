@@ -1,0 +1,47 @@
+--创建3个表空间
+
+create tablespace ts_1 datafile 'D:\OracleFiles\OracleData\ts1.dbf'
+size 10m
+extent management local autoallocate;
+create tablespace ts_2 datafile 'D:\OracleFiles\OracleData\ts2.dbf'
+size 10m
+extent management local autoallocate;
+create tablespace ts_3 datafile 'D:\OracleFiles\OracleData\ts3.dbf'
+size 10m
+extent management local autoallocate;
+
+
+--创建分区表
+create table studentgrade
+(
+  id number primary key,--记录id
+  name varchar2(10),--学生名称
+  subject varchar2(10),--学科
+  grade number --成绩
+)
+partition by range(grade)
+(
+  --小于60分，不及格
+  partition par_nopass values less than(60) tablespace ts_1,
+  --小于70分，及格
+  partition par_pass values less than(70) tablespace ts_2,
+  --大于或等于70分，优秀
+  partition par_good values less than(maxvalue) tablespace ts_3
+);
+
+
+--创建本地索引分区
+create index grade_index on studentgrade(grade)
+local--根据表分区创建本地索引分区
+(
+  partition p1 tablespace ts_1,
+  partition p2 tablespace ts_2,
+  partition p3 tablespace ts_3
+);
+
+--查询所创建的索引分区信息
+select partition_name,tablespace_name from dba_ind_partitions where index_name = 'GRADE_INDEX';
+
+
+
+

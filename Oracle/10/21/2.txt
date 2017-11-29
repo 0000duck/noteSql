@@ -1,0 +1,24 @@
+--创建表
+create table tb_10_2(
+id number(10) not null, --编号
+stuname varchar2(8),	--姓名
+sex char(2),	--性别
+age int
+);
+
+
+
+--创建序列
+create sequence id_seq
+maxvalue 10000
+start with 1
+increment by 3
+cache 50;
+
+
+
+--测试
+insert into tb_10_2(id,stuname,sex,age)
+values(id_seq.nextval,'东方','男',30);
+
+

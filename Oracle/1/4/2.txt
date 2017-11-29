@@ -1,0 +1,10 @@
+shutdown immediate
+startup
+shutdown transactional
+
+
+
+
+
+————执行完上面代码后，建议再执行下面的代码，以确保数据库正常使用
+startup

@@ -1,0 +1,2 @@
+select employee_id,lower(first_name),upper(last_name) from employees where
+lower(first_name) like 'a%';

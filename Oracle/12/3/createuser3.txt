@@ -1,0 +1,4 @@
+create user df identified by mrsoft
+default tablespace tbsp_1
+temporary tablespace temp
+quota unlimited on tbsp_1;

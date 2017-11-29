@@ -1,0 +1,14 @@
+ create table person2 					--创建以一个描述个人信息的表
+(
+  id number primary key,				--个人的编号
+  name varchar2(20),					--姓名
+  sex varchar2(2)					--性别
+)
+partition by range(id)--以id作为分区键创建范围分区
+subpartition by hash(name)--以name列作为分区键创建hash子分区
+subpartitions 2 store in(tbsp_1,tbsp_2)--hash子分区公有两个，分别存储在两个不同的命名空间中
+(
+  partition par1 values less than(5000),--范围分区，id小于5000
+  partition par2 values less than(10000),--范围分区，id小于10000
+  partition par3 values less than(maxvalue)--范围分区，id不小于10000
+);

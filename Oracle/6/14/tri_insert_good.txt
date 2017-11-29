@@ -1,0 +1,10 @@
+create or replace trigger tri_insert_good
+  before insert
+  on goods --关于goods数据表的id，在插入id列之前，引起该触发器的运行
+  for each row --创建行级触发器
+begin
+  select seq_id.nextval
+  into :new.id
+  from dual;--从序列中生成一个新的数值，赋值给当前插入行的id列
+end;
+/

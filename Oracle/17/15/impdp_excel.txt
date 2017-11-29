@@ -1,0 +1,10 @@
+--在sqlplus环境下
+create table persons
+(code number(4),
+name varchar2(20),
+sex varchar2(4),
+old number(4)
+);
+
+--在cmd环境下
+sqlldr system/1qaz2wsx control=d:\data\persons.ctl

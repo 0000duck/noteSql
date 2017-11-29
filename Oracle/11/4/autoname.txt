@@ -1,0 +1,9 @@
+create table person
+(
+  id number primary key,
+  name varchar2(20),
+  sex varchar2(2)
+)
+partition by hash(id)
+partitions 2
+store in(tbsp_1,tbsp_2);

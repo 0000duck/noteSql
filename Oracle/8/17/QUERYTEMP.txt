@@ -1,0 +1,1 @@
+select file_name,bytes,tablespace_name from dba_temp_files;
