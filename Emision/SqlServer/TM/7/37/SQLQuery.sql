@@ -1,0 +1,3 @@
+
+SELECT YEAR(GETDATE()) AS 'YEAR'
+ 

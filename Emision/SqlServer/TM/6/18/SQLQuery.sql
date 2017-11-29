@@ -1,0 +1,1 @@
+DBCC CHECKALLOC ('db_2012')

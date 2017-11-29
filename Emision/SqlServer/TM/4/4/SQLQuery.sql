@@ -1,0 +1,1 @@
+exec sp_renamedb 'mr', 'mrsoft'

@@ -1,0 +1,4 @@
+USE db_2012
+SELECT * FROM Employee
+WHERE Age > 24
+ORDER BY Name ASC

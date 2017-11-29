@@ -1,0 +1,7 @@
+BACKUP DATABASE M1				
+TO DISK = 'G:\M1备份.bak'				
+WITH FORMAT 
+GO
+RESTORE DATABASE M1				
+FROM DISK = 'G:\M1备份.bak'		
+WITH REPLACE					

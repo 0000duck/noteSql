@@ -1,0 +1,1 @@
+ENABLE  TRIGGER T_DML_3 on employee3

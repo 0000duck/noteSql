@@ -1,0 +1,8 @@
+USE db_2012
+GO
+SELECT ID, Name 
+FROM Employee 
+WHERE EXISTS (SELECT NULL)
+
+ 
+

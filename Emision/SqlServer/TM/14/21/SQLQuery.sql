@@ -1,0 +1,5 @@
+USE db_2012
+GO
+DBCC SHOWCONTIG (Student) WITH FAST
+GO
+

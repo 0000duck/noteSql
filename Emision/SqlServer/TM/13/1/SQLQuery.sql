@@ -1,0 +1,4 @@
+USE db_2012
+DECLARE Cur_Emp CURSOR FOR
+SELECT * FROM Employee
+GO

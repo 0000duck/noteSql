@@ -1,0 +1,66 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: bbb - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1.MRV\LOCALS~1\Temp\RSP4E.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/bbb.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\赵永发\Visual C++从入门到精通（第2版）6.8\TM\sl\20\图书管理系统\源程序\bbb.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1.MRV\LOCALS~1\Temp\RSP4E.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1.MRV\LOCALS~1\Temp\RSP50.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/bbb.pdb" /debug /machine:I386 /out:"Debug/bbb.exe" /pdbtype:sept 
+".\Debug\bbb.obj"
+".\Debug\bbbDlg.obj"
+".\Debug\CustomGrid.obj"
+".\Debug\DlgBaseInfoM.obj"
+".\Debug\DlgBookAdjust2.obj"
+".\Debug\DlgBookAdjustPrice2.obj"
+".\Debug\DlgBookInfo1.obj"
+".\Debug\DlgBookInput2.obj"
+".\Debug\DlgBookKinds1.obj"
+".\Debug\DlgBookPrice2.obj"
+".\Debug\DlgBookSale2.obj"
+".\Debug\DlgDeskInfo1.obj"
+".\Debug\DlgInputBack2.obj"
+".\Debug\DlgInputBackQuery3.obj"
+".\Debug\DlgInputQuery3.obj"
+".\Debug\DlgLogin.obj"
+".\Debug\DlgOperator1.obj"
+".\Debug\DlgProviderInfo1.obj"
+".\Debug\DlgQueryM.obj"
+".\Debug\DlgSaleBack2.obj"
+".\Debug\DlgSaleBackQuery3.obj"
+".\Debug\DlgSaleQuery3.obj"
+".\Debug\DlgStoreInfo1.obj"
+".\Debug\DlgStoreInfoM.obj"
+".\Debug\KeyEdit.obj"
+".\Debug\MyCoolMenu.obj"
+".\Debug\PrintDoc.obj"
+".\Debug\PrintFram.obj"
+".\Debug\PrintView.obj"
+".\Debug\Report.obj"
+".\Debug\StartUp.obj"
+".\Debug\StdAfx.obj"
+".\Debug\TabSheet.obj"
+".\Debug\bbb.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1.MRV\LOCALS~1\Temp\RSP50.tmp"
+<h3>Output Window</h3>
+Compiling...
+bbb.cpp
+E:\赵永发\Visual C++从入门到精通（第2版）6.8\TM\sl\20\图书管理系统\源程序\bbb.cpp(71) : warning C4805: '==' : unsafe mix of type 'int' and type 'const bool' in operation
+Linking...
+
+
+
+<h3>Results</h3>
+bbb.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

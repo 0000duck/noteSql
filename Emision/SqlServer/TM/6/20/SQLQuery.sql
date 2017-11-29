@@ -1,0 +1,2 @@
+Use db_2012
+CHECKPOINT

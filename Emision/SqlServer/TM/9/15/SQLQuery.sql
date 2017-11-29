@@ -1,0 +1,3 @@
+USE db_2012
+SELECT * FROM Student 
+CROSS JOIN Course

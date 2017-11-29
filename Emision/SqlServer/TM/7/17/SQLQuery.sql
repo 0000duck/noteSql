@@ -1,0 +1,2 @@
+
+SELECT SQRT(16) AS '16 的平方根'

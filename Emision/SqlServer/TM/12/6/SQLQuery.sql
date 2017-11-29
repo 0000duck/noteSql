@@ -1,0 +1,5 @@
+ALTER TRIGGER T_DML_Emp3			
+ON employee3
+AFTER INSERT,UPDATE,DELETE
+AS 
+RAISERROR ('正在向表中插入、修改或删除数据', 16, 10);

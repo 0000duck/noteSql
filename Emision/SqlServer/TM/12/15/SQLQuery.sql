@@ -1,0 +1,1 @@
+ENABLE TRIGGER  connection_limit_trigger ON ALL SERVER

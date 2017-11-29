@@ -1,0 +1,2 @@
+
+SELECT GETDATE() AS '现在时间'

@@ -1,0 +1,2 @@
+USE db_2012
+DROP FULLTEXT  INDEX  ON Employee

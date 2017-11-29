@@ -1,0 +1,4 @@
+
+SELECT GETDATE() AS '现在时间'
+SELECT DATEADD("DAY", 2,GETDATE())
+AS '加两天的时间'

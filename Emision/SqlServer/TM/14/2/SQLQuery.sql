@@ -1,0 +1,4 @@
+USE db_2012
+CREATE UNIQUE CLUSTERED INDEX  IX_Stu_Sno1
+ON Student (Sno)
+

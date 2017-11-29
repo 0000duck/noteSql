@@ -1,0 +1,6 @@
+USE db_2012
+BEGIN TRANSACTION INSERT_DATA	--开始事务
+	INSERT INTO employee4 VALUES(6,'张艳丽','女',25,1111111) --插入数据
+	SELECT * FROM employee4			--查询结果
+COMMIT TRANSACTION INSERT_DATA	--结束事务		
+GO

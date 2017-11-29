@@ -1,0 +1,1 @@
+exec sp_renamedb 'mrsoft', '明日科技'

@@ -1,0 +1,3 @@
+USE db_2012
+SELECT * FROM Student
+WHERE Sno = (SELECT Sno FROM SC WHERE Grade > 90)

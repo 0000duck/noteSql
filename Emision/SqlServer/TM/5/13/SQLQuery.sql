@@ -1,0 +1,3 @@
+USE db_2012
+ALTER TABLE mingri
+DROP CONSTRAINT PRM_son  

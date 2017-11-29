@@ -1,0 +1,1 @@
+sp_rename 'Proc_Stu' ,'Proc_Info'

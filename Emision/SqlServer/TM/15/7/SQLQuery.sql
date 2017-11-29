@@ -1,0 +1,8 @@
+SET TRANSACTION ISOLATION LEVEL Repeatable Read
+BEGIN TRANSACTION
+SELECT * FROM Employee
+ROLLBACK TRANSACTION 
+SET TRANSACTION  ISOLATION LEVEL Repeatable Read  --设置可重复读隔离级别
+INSERT INTO Employee values ('18','张雨','男','22,'明日科技'')
+
+

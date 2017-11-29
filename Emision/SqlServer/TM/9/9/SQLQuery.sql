@@ -1,0 +1,4 @@
+USE db_2012
+SELECT * FROM Student
+WHERE EXISTS 
+(SELECT Sno FROM SC WHERE Student.Sno = SC.Sno)

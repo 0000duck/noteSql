@@ -1,0 +1,4 @@
+
+SELECT GETDATE() AS '现在时间'
+SELECT DATEADD("YEAR", 1,GETDATE())
+AS '加一年的时间'

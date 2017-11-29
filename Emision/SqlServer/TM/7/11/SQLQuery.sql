@@ -1,0 +1,4 @@
+
+
+
+SELECT PI() AS Ô²ÖÜÂÊ

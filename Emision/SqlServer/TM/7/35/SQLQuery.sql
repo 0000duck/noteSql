@@ -1,0 +1,4 @@
+
+SELECT DAY(GETDATE())
+AS 'DAY'
+ 

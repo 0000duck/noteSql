@@ -1,0 +1,2 @@
+USE db_2012
+DELETE FROM Employee WHERE ID=17

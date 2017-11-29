@@ -1,0 +1,1 @@
+DISABLE TRIGGER T_DML_3 ON employee3

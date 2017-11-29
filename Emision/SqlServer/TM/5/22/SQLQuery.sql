@@ -1,0 +1,9 @@
+use db_2012
+CREATE TABLE mrsoft
+(
+ ID INT ,
+ Wage MONEY,
+ CONSTRAINT FKEY_ID
+ FOREIGN KEY (ID)
+REFERENCES Employee(ID)
+)
