@@ -1,4 +1,0 @@
-show newpage
-newpage 1
-set newpage 4
-select user_id,username from dba_users;

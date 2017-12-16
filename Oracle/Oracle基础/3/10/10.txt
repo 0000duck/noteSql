@@ -1,3 +1,0 @@
- col sal format $999,999.00
- col sal off
- select empno,ename,sal from scott.emp;

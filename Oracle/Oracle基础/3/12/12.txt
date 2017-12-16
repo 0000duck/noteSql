@@ -1,6 +1,0 @@
- set pagesize 8
- define varT='            雇员信息表'
- define varB='操作员：东方'
- ttitle left varT
- btitle left varB
- select empno,ename,job from scott.emp;

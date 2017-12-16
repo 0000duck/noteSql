@@ -1,2 +1,0 @@
-spool c:\emp.txt
-select empno,ename,job,sal from scott.emp where job='SALESMAN';

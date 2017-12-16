@@ -1,4 +1,0 @@
- set pagesize 8
- ttitle left '           销售情况排行表'
- btitle left '打印日期：2011年9月20日   打印人：东方'
- select * from scott.salgrade;

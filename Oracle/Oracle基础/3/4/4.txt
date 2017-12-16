@@ -1,2 +1,0 @@
- set numformat $999,999,999.00
- select ename,job,sal from scott.emp;

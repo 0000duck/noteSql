@@ -1,3 +1,0 @@
- set pause on
- set pause '°´<enter>¼ü¼ÌĞø'
- select user_id,username,account_status from dba_users;

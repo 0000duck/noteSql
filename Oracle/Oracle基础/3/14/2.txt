@@ -1,2 +1,0 @@
-col comm null 'TEXT'
-select ename,comm from scott.emp where comm is null;
