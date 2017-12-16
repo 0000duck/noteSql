@@ -1,0 +1,26 @@
+sqlplus /nolog
+connect system/1qaz2wsx as sysdba
+conn / as sysdba
+
+-- 阻止新连接，等待连接断开，关闭数据库
+shutdown normal
+-- 阻止新连接，等待事务提交完成，关闭数据库
+shutdown transactional
+-- 尽可能短时间内立即关闭数据库，阻止新连接，回滚事务，关闭数据库
+shutdown immediate
+-- 以终止的方式关闭数据库，阻止新连接，不回滚事务，关闭数据库
+shutdown abort
+
+-- 启动实例，加载数据库，并打开数据库
+startup open
+-- 启动实例，不加载数据库，不打开任何数据文件，创建数据库或重建控制文件时用到，数据库维护，完全恢复，更改数据库或归档模式等用到。
+startup nomount
+-- 启动实例，加载数据库，并保持数据库的关闭状态
+startup mount
+-- 其他模式失败时，终止实例，重启数据库
+startup force
+
+
+在开始菜单中选择“所有程序”/“Oracle - OraDb11g_home1”/“配置和移植工具”/“Database Configuration Assistant”菜单命令，
+弹出“Database Configuration Assistant”窗口，该窗口中单击“下一步”按钮，进入向导步骤窗口，
+选中“创建数据库”单选按钮，然后按照向导逐步操作即可（在向导的步骤3窗口的“全局数据库名”文本框中需要输入MR）。

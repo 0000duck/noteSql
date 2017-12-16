@@ -1,0 +1,54 @@
+数据库实例 -> 逻辑存储结构
+数据库文件 -> 物理存储结构
+
+用户登录时访问 数据库实例， 数据库实例访问数据库文件。
+
+从上至下的顺序访问：
+--数据库实例
+--表空间
+--表、索引、视图
+--数据段、索引段、临时段、回滚段
+--数据区（索引段）
+--数据块
+
+通常数据块的大小是系统块的4倍
+1、【data blocks】数据块的结构：
+--块头
+--表目录
+--行目录
+（以上三个成为头部数据，若破坏，则无法读取这部分数据）
+--空余空间
+--行数据
+
+2、【Extent】数据区：
+数据区是Oracle存储分配的最小单位，是表中增长的基本单位，包含多个数据块。
+ col name format a30
+ col value format a20
+ select name,value from v$parameter where name = 'db_block_size' ;
+ 8192字节
+
+3、【Segment】数据段：
+回滚段：事务开始时分配，自动管理的，也可以手工
+临时段：create index, select order by, select distinct, select group by 等操作时分配，
+	调整sort_area_size初始化参数增大排序区，以便操作在内存中完成。
+	
+4、【TableSpace】表空间：
+最大的逻辑划分区域，一个表空间对应一个多个数据文件。表空间想当于文件夹，数据文件相当于文件夹中的文件。
+至少有一个system表空间，若一个表空间有多个数据文件，则存储时可能存至多个数据文件中，表空间数据文件存放于不同的盘上，可减少IO冲突，提高性能。
+ 
+ 
+查看字典表：
+select * from dict;
+
+查看数据库内部系统表信息：
+select * from v$fixed_view_definition
+ 
+
+
+
+ 
+ select segment_name,bytes,tablespace_name from dba_segments;
+ 
+ select name,bytes from v$datafile;
+
+ 

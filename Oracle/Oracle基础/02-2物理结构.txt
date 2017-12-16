@@ -1,0 +1,60 @@
+在读取数据时，先访问内存，若没有则访问数据文件。
+提交数据时，先保存在内存中，由Oracle后台进程DBWR来决定何时写入文件。
+
+查看数据文件和表空间信息：
+col file_name for a50;
+set linesize 100;
+select file_name,tablespace_name from dba_data_files;
+
+临时文件：
+col file_name format a50;
+col tablespace_name format a20;
+select file_name,tablespace_name from dba_temp_files;
+
+控制文件：
+存放数据库名、创建日期、数据文件、日志文件、检查点、归档等信息，在启动时加载。
+col name format a60;
+select name from v$controlfile;
+
+日志文件：
+创建表空时可以设置nologing属性，不产生日志文件。
+由LGWR进程写入
+col member for a50;
+select name from v$logfile;
+1、非归档模式：重复循环写入（默认）
+2、归档模式：不断增加日志文件，且中间会阻塞
+通过v$database视图查看模式：
+[archivelog, noarchivelog]
+select dbid, name, log_mode from v$database
+查看归档日志文件路径：
+set pagesize 30;
+show parameter log_archive_dest;
+ 
+服务器参数文件：
+show parameter
+select name,value,ismodified from v$parameter;
+select name,value,ismodified from v$parameter WHERE name='log_archive_dest';
+修改服务器参数[alter system]：
+alter system set db_block_s--------ize=4096;
+
+密码文件：
+orapwd 文件名	密码	用户数
+orapwd file=e:\asdf.ora password=111111 entries=40
+select name,value,ismodified from v$parameter WHERE name='remote_login_passwordfile';
+-- EXCLUSIVE 只有一个数据库可以使用此密码文件
+-- NONE 只有通过操作系统验证
+-- SHARED 多个数据库实例都可以采用此密码文件验证
+
+警告文件：
+即警告日志文件，alert_orcl.log
+查看参数值：
+select name,value,ismodified from v$parameter WHERE name='background_dump_dest';
+警告文件会越来越大，应该定期删除。
+
+用户信息跟踪文件：
+select name,value,ismodified from v$parameter WHERE name='user_dump_dest';
+
+
+
+
+

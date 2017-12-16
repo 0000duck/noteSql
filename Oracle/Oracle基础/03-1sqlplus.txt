@@ -1,0 +1,53 @@
+set pagesize 18
+select user_id,username,account_status from dba_users;
+
+show newpage
+set newpage 1
+select user_id,username,account_status from dba_users;
+
+ set pause on
+ set pause '按<enter>键继续'
+ select user_id,username,account_status from dba_users;
+
+  set numformat $999,999,999.00
+ select ename,job,sal from scott.emp;
+ 
+ spool c:\emp.txt
+select empno,ename,job,sal from scott.emp where job='SALESMAN';
+ 
+  select * from scott.dept;
+  
+   col sal format $999,999.00
+ select empno,ename,sal from scott.emp;
+  
+   col empno heading 雇员编号
+ col ename heading 雇员姓名
+ col sal heading 雇员工资
+ select empno,ename,sal from scott.emp;
+  
+   col comm null '空值'
+ select empno,ename,comm from scott.emp where comm is null;
+  
+   col sal format $999,999.00
+ col sal off
+ select empno,ename,sal from scott.emp;
+  
+   set pagesize 8
+ ttitle left '           销售情况排行表'
+ btitle left '打印日期：2011年9月20日   打印人：东方'
+ select * from scott.salgrade;
+  
+   set pagesize 8
+ define varT='            雇员信息表'
+ define varB='操作员：东方'
+ ttitle left varT
+ btitle left varB
+ select empno,ename,job from scott.emp;
+  
+  show newpage
+newpage 1
+set newpage 4
+select user_id,username from dba_users;
+
+col comm null 'TEXT'
+select ename,comm from scott.emp where comm is null;
