@@ -1,1 +1,0 @@
-select segment_name,bytes,tablespace_name from dba_segments;

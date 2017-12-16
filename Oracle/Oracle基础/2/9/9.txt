@@ -1,2 +1,0 @@
- set pagesize 50;
- select name,description from v$bgprocess;

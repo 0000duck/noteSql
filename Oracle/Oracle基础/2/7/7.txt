@@ -1,2 +1,0 @@
- set pagesize 30;
- show parameter log_archive_dest;
