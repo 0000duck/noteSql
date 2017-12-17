@@ -1,8 +1,0 @@
-create or replace procedure insert_dept(
-  num_deptno in number,--定义存储部门编号的IN参数
-  var_dname in varchar2 default '综合部',--定义存储部门名称的IN参数，并初始默认值
-  var_loc in varchar2 default '北京') is
-begin
-  insert into dept values(num_deptno,var_dname,var_loc);--插入一条记录
-end;
-/

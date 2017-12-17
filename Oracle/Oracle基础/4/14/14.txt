@@ -1,4 +1,0 @@
-select empno,ename,sal
-from emp f
-where sal > (select avg(sal) from emp where job = f.job)
-order by job;

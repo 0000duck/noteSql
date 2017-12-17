@@ -1,2 +1,0 @@
-connect scott/1qaz2wsx
- select empno,ename,sal from emp where sal < 2000 or sal > 3000;

@@ -1,5 +1,0 @@
-create table dept_log
-(
-  operate_tag varchar2(10),			--定义字段，存储操作种类信息
-  operate_time date				--定义字段，存储操作日期
-);

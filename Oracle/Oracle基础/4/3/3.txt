@@ -1,4 +1,0 @@
- select empno,ename,job
-from scott.emp
-where job='SALESMAN'
-order by empno;

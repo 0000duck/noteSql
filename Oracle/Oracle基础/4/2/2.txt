@@ -1,3 +1,0 @@
- select empno,ename,sal from scott.emp;
- select EMPNO,ENAME,SAL from SCOTT.EMP;
- select emPNO,ename,sAL from scott.EmP;

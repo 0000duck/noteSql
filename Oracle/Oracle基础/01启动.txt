@@ -24,3 +24,37 @@ startup force
 在开始菜单中选择“所有程序”/“Oracle - OraDb11g_home1”/“配置和移植工具”/“Database Configuration Assistant”菜单命令，
 弹出“Database Configuration Assistant”窗口，该窗口中单击“下一步”按钮，进入向导步骤窗口，
 选中“创建数据库”单选按钮，然后按照向导逐步操作即可（在向导的步骤3窗口的“全局数据库名”文本框中需要输入MR）。
+
+--表空间  
+create  tablespace BUSSPEED 
+datafile 'E:\software\OracleData\BUSSPEED.DBF'  --物理文件名
+size 50m  --初始大小为50M
+autoextend on  --自动扩展
+next 50m maxsize 20480m  --每次自动扩展50M，最大可到20480M
+extent management local;
+
+--2.建用户  
+create user BUSSPEED identified by admin123
+default tablespace BUSSPEED; 
+create user C##BUSSPEED identified by admin123
+default tablespace BUSSPEED; 
+ 
+--3.赋权
+grant connect,resource to BUSSPEED;  
+grant create any sequence to BUSSPEED;  
+grant create any table to BUSSPEED;  
+grant delete any table to BUSSPEED;  
+grant insert any table to BUSSPEED;  
+grant select any table to BUSSPEED;  
+grant unlimited tablespace to BUSSPEED;  
+grant execute any procedure to BUSSPEED;  
+grant update any table to BUSSPEED;  
+grant create any view to BUSSPEED;  
+
+grant dba to BUSSPEED;  
+
+--导入
+imp BUS_GPS/admin123@SHEN  file=C:\work\tongtu\export\jw.dmp full=y
+imp buscity/admin123ttyj7890uiop@SHEN  file=C:\work\tongtu\export\124\bc.dmp full=y
+
+exp BUS_GPS/admin123@localhost:1521/orcl file=E:\soft\yth\export\jw.dmp rows=n

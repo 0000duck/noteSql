@@ -1,2 +1,0 @@
-connect hr/hr;
-select street_address from locations where  state_province is null;
