@@ -1,2 +1,0 @@
-backup incremental level=2 cumulative tablespace example
-format 'D:\OracleFiles\Backup\oar11g_%m_%t_%c.bak';

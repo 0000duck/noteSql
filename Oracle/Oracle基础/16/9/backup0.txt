@@ -1,7 +1,0 @@
---在rman环境下
-run{
-allocate channel ch_1 type disk;
-backup incremental level=0
-format 'D:\OracleFiles\Backup\oar11g_%m_%d_%c.bak'
-tablespace system,sysaux,users;
-}

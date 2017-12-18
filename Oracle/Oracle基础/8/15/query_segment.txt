@@ -1,2 +1,0 @@
-select segment_name, extent_id,bytes,status from dba_undo_extents
-where segment_name='_SYSSMU3_991555123$';

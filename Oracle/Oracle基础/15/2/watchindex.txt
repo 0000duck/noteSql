@@ -1,6 +1,0 @@
---设置监视代码
-alter index grade_index monitoring usage;
---检查索引使用情况
-select * from v$object_usage;
---删除索引
-drop index grade_index;

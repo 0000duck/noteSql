@@ -1,1 +1,0 @@
-create public synonym public_dept for scott.dept;

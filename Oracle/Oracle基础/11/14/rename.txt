@@ -1,1 +1,0 @@
-alter index index_saleprice rename partition p3 to p_new;

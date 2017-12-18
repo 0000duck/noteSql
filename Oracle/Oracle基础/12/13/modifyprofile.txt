@@ -1,6 +1,0 @@
-alter profile password_lift_time limit
-cpu_per_session 20000
-sessions_per_user 10
-cpu_per_call 500
-password_life_time 180
-failed_login_attempts 10;

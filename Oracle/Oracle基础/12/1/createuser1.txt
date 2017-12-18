@@ -1,3 +1,0 @@
-create user mr identified by mrsoft
-default tablespace users
-temporary tablespace temp;

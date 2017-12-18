@@ -1,3 +1,0 @@
-create undo tablespace undo_tbs_1
-datafile 'D:\OracleFiles\OracleData\undotbs1.dbf'
-size100M;

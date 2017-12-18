@@ -1,3 +1,0 @@
-create index emp_deptno_index on emp(deptno)
-pctfree 25
-tablespace users;

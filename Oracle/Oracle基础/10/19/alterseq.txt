@@ -1,4 +1,0 @@
-alter sequence empno_seq
-maxvalue 100000
-increment by 200
-cache 100

@@ -1,5 +1,0 @@
-connect scott/1qaz2wsx
-create or replace view emp_view as
-select empno,ename,job,deptno
-from emp
-where deptno = 20;

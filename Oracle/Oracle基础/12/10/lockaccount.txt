@@ -1,6 +1,0 @@
-create profile lock_account limit
-failed_login_attempts 5
-password_lock_time 7;
-
-
-alter user dongfang profile lock_account;

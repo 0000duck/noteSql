@@ -1,2 +1,0 @@
-create temporary tablespace tp1 tempfile 'D:\OracleFiles\tempfiles\tp1.tpf' size 10m tablespace group group1;
-create temporary tablespace tp2 tempfile 'D:\OracleFiles\tempfiles\tp2.tpf' size 20m tablespace group group1;

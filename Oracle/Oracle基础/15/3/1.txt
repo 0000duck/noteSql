@@ -1,3 +1,0 @@
-conn scott/1qaz2wsx;
-create table dept_copy as select * from dept;
-truncate table dept_copy;

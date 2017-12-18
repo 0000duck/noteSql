@@ -1,2 +1,0 @@
-create directory dump_dir as 'd:\dump';
-grant read,write on directory dump_dir to scott;

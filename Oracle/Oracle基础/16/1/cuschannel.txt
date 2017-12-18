@@ -1,5 +1,0 @@
-run{
-allocate channel ch_1 device type disk
-format = 'd:\oraclebf\%u_%c.bak';
-backup tablespace system,users,tbsp_1,ts_1 channel ch_1;
-}

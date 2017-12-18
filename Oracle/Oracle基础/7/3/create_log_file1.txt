@@ -1,2 +1,0 @@
-alter database add logfile member
-'E:\OracleFiles\LogFiles\REDO4_C.LOG' to group 4;

@@ -1,4 +1,0 @@
-alter table clients
-add partition hebei values('ºÓ±±Ê¡')
-storage(initial 10K next 20k) tablespace tbsp_1
-nologging;

@@ -1,1 +1,0 @@
-expdp scott/1qaz2wsx directory=dump_dir dumpfile=content.dmp content=data_only

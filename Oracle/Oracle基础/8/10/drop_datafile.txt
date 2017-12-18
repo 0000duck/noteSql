@@ -1,1 +1,0 @@
-alter tablespace users drop datafile 'e:\app\Administrator\oradata\orcl\users02.dbf';

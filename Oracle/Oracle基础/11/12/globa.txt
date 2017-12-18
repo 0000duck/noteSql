@@ -1,7 +1,0 @@
-create index index_SalePrice on Books(SalePrice)
-global partition by range(SalePrice)
-(
-  partition p1 values less than (30),
-  partition p2 values less than (50),
-  partition p3 values less than (maxvalue)
-);

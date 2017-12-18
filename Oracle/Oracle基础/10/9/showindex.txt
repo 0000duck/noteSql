@@ -1,4 +1,0 @@
-column column_name for a30
-select column_name ,column_length
-from user_ind_columns
-where index_name = 'EMP_DEPTNO_INDEX';

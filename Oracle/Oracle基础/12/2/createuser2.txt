@@ -1,4 +1,0 @@
-create user east identified by mrsoft
-default tablespace users
-temporary tablespace temp
-quota 10m on tbsp_1;

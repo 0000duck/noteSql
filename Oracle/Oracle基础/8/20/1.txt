@@ -1,6 +1,0 @@
-create tablespace tbs_test datafile 'D:\OracleFiles\OracleData\datafile_test.dbf'
-size 100m
-extent management local autoallocate
-segment space management auto;
-
-alter database default tablespace tbs_test;

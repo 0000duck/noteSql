@@ -1,2 +1,0 @@
-connect system/1qaz2wsx;
-create role designer identified by 123456;

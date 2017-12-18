@@ -1,2 +1,0 @@
---在cmd下导入
-impdp scott/1qaz2wsx directory=dump_dir dumpfile=tab.dmp tables=hr.employees remap_schema=hr:scott

@@ -1,1 +1,0 @@
-impdp scott/1qaz2wsx directory=dump_dir dumpfile=sqlfile.dmp sqlfile=test.sql

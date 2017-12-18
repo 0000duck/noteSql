@@ -1,2 +1,0 @@
---ÔÚcmdÏÂ
-expdp scott/1qaz2wsx directory=dump_dir dumpfile=tab.dmp tables=emp,dept

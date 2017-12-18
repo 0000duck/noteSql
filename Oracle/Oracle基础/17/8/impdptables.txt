@@ -1,1 +1,0 @@
-impdp system/1qaz2wsx directory=dump_dir dumpfile=tab.dmp tables=scott.dept,scott.emp remap_schema=scott:system

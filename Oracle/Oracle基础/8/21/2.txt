@@ -1,3 +1,0 @@
-create temporary tablespace temp_test tempfile 'D:\OracleFiles\tempfiles\temp_test.tpf' size 100m;
-
-alter database default temporary tablespace temp_test;

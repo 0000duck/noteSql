@@ -1,4 +1,0 @@
-create or replace view emp_view_union as
-select d.dname,d.loc,e.empno,e.ename
-from emp e,dept d
-where e.deptno = d.deptno and d.deptno = 20;

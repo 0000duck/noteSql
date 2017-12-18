@@ -1,4 +1,0 @@
-alter database add logfile group 5
-('D:\OracleFiles\LogFiles\REDO5_A.LOG',
-'E:\OracleFiles\LogFiles\REDO5_B.LOG')
-size 20M;

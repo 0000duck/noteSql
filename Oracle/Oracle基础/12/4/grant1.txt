@@ -1,3 +1,0 @@
-connect system/1qaz2wsx;
-grant connect,resource to east;
-connect east/123456;

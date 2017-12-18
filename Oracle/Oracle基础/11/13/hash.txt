@@ -1,2 +1,0 @@
-create index index_ISBN on books(ISBN)
-global partition by hash(ISBN);

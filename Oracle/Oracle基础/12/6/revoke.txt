@@ -1,2 +1,0 @@
-connect system/1qaz2wsx;
-revoke resource from east;

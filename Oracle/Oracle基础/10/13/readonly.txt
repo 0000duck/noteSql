@@ -1,4 +1,0 @@
-create or replace view emp_view_readonly as
-select * from dept
-where deptno != 88
-with read only;

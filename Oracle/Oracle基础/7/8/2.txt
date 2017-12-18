@@ -1,5 +1,0 @@
-conn system/1qaz2wsx as sysdba;
-shutdown immediate;
-startup mount;
-alter database archivelog;
-alter database open;

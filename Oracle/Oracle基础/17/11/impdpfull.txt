@@ -1,1 +1,0 @@
-impdp system/1qaz2wsx directory=dump_dir dumpfile=fulldatabase.dmp full=y

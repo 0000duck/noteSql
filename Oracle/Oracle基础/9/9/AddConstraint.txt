@@ -1,1 +1,0 @@
-alter table Books add constraint Books_PK primary key(BookNo);

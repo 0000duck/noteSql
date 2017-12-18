@@ -1,3 +1,0 @@
-backup incremental level = 1
-format 'D:\OracleFiles\Backup\oar11g_%m_%d_%c.bakf'
-tablespace system;

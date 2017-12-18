@@ -1,3 +1,0 @@
-create tablespace tbs_test_1 datafile 'D:\OracleFiles\OracleData\datafile1.dbf'
-size 10m
-extent management local uniform size 256K;
