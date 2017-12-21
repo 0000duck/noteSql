@@ -1,3 +1,30 @@
+    1、查询当前用户下有哪些是分区表：  
+    SELECT * FROM USER_PART_TABLES;  
+       
+    2、查询当前用户下有哪些分区索引：  
+    SELECT * FROM USER_PART_INDEXES;  
+       
+    3、查询当前用户下分区索引的分区信息：  
+    SELECT * FROM USER_IND_PARTITIONS T  
+    WHERE T.INDEX_NAME=?  
+       
+    4、查询当前用户下分区表的分区信息：  
+    SELECT * FROM USER_TAB_PARTITIONS T  
+    WHERE T.TABLE_NAME=?;  
+       
+    5、查询某分区下的数据量：  
+    SELECT COUNT(*) FROM TABLE_PARTITION PARTITION(TAB_PARTOTION_01);  
+       
+    6、查询索引、表上在那些列上创建了分区：  
+    SELECT * FROM USER_PART_KEY_COLUMNS;  
+       
+    7、查询某用户下二级分区的信息（只有创建了二级分区才有数据）：  
+    SELECT * FROM USER_TAB_SUBPARTITIONS;  
+
+    
+
+
+
 create table ware_retail_part --创建一个描述商品零售的数据表
 (
   id integer primary key,--销售编号
