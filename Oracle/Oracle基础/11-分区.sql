@@ -19,10 +19,13 @@
     SELECT * FROM USER_PART_KEY_COLUMNS;  
        
     7、查询某用户下二级分区的信息（只有创建了二级分区才有数据）：  
-    SELECT * FROM USER_TAB_SUBPARTITIONS;  
+    SELECT * FROM USER_TAB_SUBPARTITIONS;
 
-    
 
+-- 全删除
+ALTER TABLE yourTable DROP PARTITION partionName1;
+-- 清数据
+ALTER TABLE yourTable TRUNCATE PARTITION partionName1;
 
 
 create table ware_retail_part --创建一个描述商品零售的数据表
