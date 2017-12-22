@@ -2,7 +2,7 @@ package oracle;
 
 import java.util.Arrays;
 
-public class CreatePartition {
+public class CreatePartitionOld {
 
     static String[] arr = new String[] {"20160401","20160403","20160404","20160510","20160511","20160704","20160705","20160807","20160809","20160905","20160906","20161010","20161011","20161106","20161107","20161229","20161230","20161231","20170101","20171231"};
     static String[] arr1 = new String[] {"07","09","17","19","24"};
